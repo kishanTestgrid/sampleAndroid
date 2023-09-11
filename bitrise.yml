@@ -17,13 +17,15 @@ workflows:
             #!/bin/bash
             set -e
 
-            curl --location 'https://qa.testgrid.io.testgrid.io/ci/' \
-            --form 'user_token="vj2w0b4u3ij1vsshmfk5iufnq4uqxwtv"' \
+            curl --location 'https://qa.testgrid.io/ci/app_build_run' \
+            --header 'Cookie: ci_session=fd62b992716a44bb482411af4bafa28a5989dace' \
             --form 'application_token="b40decf127b29c82027237d21861aa63"' \
+            --form 'user_token="vj2w0b4u3ij1vsshmfk5iufnq4uqxwtv"' \
             --form 'version_token="df5c4464a1fa8abcf4bdd23eb5f55311"' \
             --form 'version_module_id="48"' \
-            --form 'process_type="oaa"' \
             --form 's_device="1OA093"' \
-            --form 'upload_file=@"/Users/harry/Documents/Kishan_TG_Work/All_APKs/URunnerV2_Jul_05.apk"'
+            --form 'process_type="oaa"' \
+            --form 'app_build_id="25"' \
+            --form 'bundle_identifier="com.app.urunner"'
 
     # Add any additional steps for post-processing or notifications.
