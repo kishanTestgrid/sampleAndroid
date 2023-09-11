@@ -17,13 +17,13 @@ workflows:
             #!/bin/bash
             set -e
 
-            curl --location 'https://poc2.testgrid.io.testgrid.io/ci/' \
-            --form 'user_token="ibii3se3eoo5s6ui86mo9agx10alt2ca"' \
-            --form 'application_token="b6fda800e96f58633d0cc40c17ee73ae"' \
-            --form 'version_token="7aad88690e77a23ad17a5fec9b09b51c"' \
-            --form 'version_module_id="12"' \
+            curl --location 'https://qa.testgrid.io.testgrid.io/ci/' \
+            --form 'user_token="vj2w0b4u3ij1vsshmfk5iufnq4uqxwtv"' \
+            --form 'application_token="b40decf127b29c82027237d21861aa63"' \
+            --form 'version_token="df5c4464a1fa8abcf4bdd23eb5f55311"' \
+            --form 'version_module_id="48"' \
             --form 'process_type="oaa"' \
-            --form 's_device="PUHDKY"' \
+            --form 's_device="1OA093"' \
             --form 'upload_file=@"/Users/harry/Documents/Kishan_TG_Work/All_APKs/URunnerV2_Jul_05.apk"'
 
     # Add any additional steps for post-processing or notifications.
