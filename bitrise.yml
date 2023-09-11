@@ -1,1 +1,29 @@
+---
+format_version: 1.6
+default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
 
+workflows:
+  version: 1
+  your_workflow_name:
+    steps:
+    - git-clone@4.0.18: {}
+
+    # Add any steps for installing dependencies if needed.
+
+    - script@1.1.5:
+        title: Run cURL command
+        inputs:
+        - content: |-
+            #!/bin/bash
+            set -e
+
+            curl --location 'https://poc2.testgrid.io.testgrid.io/ci/' \
+            --form 'user_token="ibii3se3eoo5s6ui86mo9agx10alt2ca"' \
+            --form 'application_token="b6fda800e96f58633d0cc40c17ee73ae"' \
+            --form 'version_token="7aad88690e77a23ad17a5fec9b09b51c"' \
+            --form 'version_module_id="12"' \
+            --form 'process_type="oaa"' \
+            --form 's_device="PUHDKY"' \
+            --form 'upload_file=@"/Users/harry/Documents/Kishan_TG_Work/All_APKs/URunnerV2_Jul_05.apk"'
+
+    # Add any additional steps for post-processing or notifications.
